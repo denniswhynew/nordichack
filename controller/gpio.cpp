@@ -14,9 +14,11 @@
 #define SPEED_SENSE_PIN 17
 #define SAFETY_SENSE_PIN 27
 
-// 19.2e6 Hz / CLOCK_DIVISOR / RANGE = 20 Hz
-#define PWM_CLOCK_DIVISOR 3840
-#define PWM_RANGE 250
+// In wiringPi.c if piGpioBase == GPIO_PERI_BASE_2711
+// divisor = 540*divisor/192
+// 54e6 Hz / CLOCK_DIVISOR / RANGE = 19.9 Hz
+#define PWM_CLOCK_DIVISOR 1456
+#define PWM_RANGE 660
 
 static volatile int counter = 0;
 static volatile int frequency = 0;
@@ -78,8 +80,8 @@ void Gpio::init()
 
   pinMode(PWM_PIN, PWM_OUTPUT);
   pwmSetMode(PWM_MODE_MS);
-  pwmSetClock(3840);
-  pwmSetRange(250);
+  pwmSetClock(PWM_CLOCK_DIVISOR);
+  pwmSetRange(PWM_RANGE);
 
   pinMode(SPEED_SENSE_PIN, INPUT);
   pullUpDnControl(SPEED_SENSE_PIN, PUD_UP);

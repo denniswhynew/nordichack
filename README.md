@@ -1,19 +1,18 @@
 # NordicHack
 
 This project implements a controller and web interface for treadmills that use
-the MC2100LTS-30 motor controller board (Icon part number 263165). This likely
-includes many Icon Fitness treadmills under various brand names such as
-Epic, NordicTrack, Proform, Reebok, and probably others. Use the part search
-form at [Icon Service Canada](https://www.iconservice.ca/CustomerService/parts)
+the MC5100DTS-18W motor controller board (Icon part number 326907). This likely
+includes many Icon Fitness treadmills. Use the part search form
+at [Icon Service Canada](https://www.iconservice.ca/CustomerService/parts)
 or [Icon Service](https://www.iconservice.com/CustomerService/parts.do) to
-search for part number 263165 to see if your model might work.
+search for part number 326907 to see if your model might work.
 
 The long term goal is to allow for control of treadmill speed and incline, easy
 construction of training programs, and recording fitness data, including heart rate
 (via a USB ANT+ dongle).
 
 # Interface hardware
-
+==Raspberry Pi 4 only!==
 Here is a very basic schematic for hooking the Pi up to the controller board.
 There is no need to cut anything to do this: the cable linking the console and
 the controller should have a connector at the top of the leg holding the
@@ -114,5 +113,7 @@ pip install flask pyzmq gevent Flask-Sockets
 deactivate
 ```
 
-Once that is set up, you can run the web server using the provided
+Once that is set up, you can run fakecontroller to receive package from web server using
+`fakecontroller` under controller folder
+And then run the web server using the provided
 `run-server.sh` script.
