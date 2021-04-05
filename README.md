@@ -115,6 +115,6 @@ deactivate
 ```
 
 Once that is set up, you can run
-`fakecontroller` under controller folder  
+`fakecontroller` under controller folder.  
 And then run the web server using the provided
 `run-server.sh` script.
