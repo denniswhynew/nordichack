@@ -29,8 +29,8 @@ app.config.update(dict(
     SECRET_KEY='development key',
     USERNAME='admin',
     PASSWORD='admin',
-    ZMQ='tcp://localhost:5555',
-    #ZMQ='fake',
+    #ZMQ='tcp://localhost:5555'
+    ZMQ='fake',
     #ANT_USB_PRODUCTID='fake',
     ANT_USB_PRODUCTID=0x1009,
     ANT_HR_DEVICE_NUM=23358,
