@@ -12,7 +12,7 @@ construction of training programs, and recording fitness data, including heart r
 (via a USB ANT+ dongle).
 
 # Interface hardware
-**Raspberry Pi 4 only!**  
+
 Here is a very basic schematic for hooking the Pi up to the controller board.
 There is no need to cut anything to do this: the cable linking the console and
 the controller should have a connector at the top of the leg holding the
@@ -31,6 +31,7 @@ This project is a suite of three pieces of software.
 
 ## Controller
 
+**Raspberry Pi 4 only!**  
 The controller program is written in C++ and is responsible for interacting with
 the GPIO pins. It has a minimum of logic, being responsible only for
 calculations directly related to controlling the speed and incline of the
