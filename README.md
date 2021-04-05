@@ -115,6 +115,6 @@ deactivate
 ```
 
 Once that is set up, you can run fakecontroller to receive package from web server using
-`fakecontroller` under controller folder
+`fakecontroller` under controller folder  
 And then run the web server using the provided
 `run-server.sh` script.
