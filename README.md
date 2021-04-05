@@ -12,7 +12,7 @@ construction of training programs, and recording fitness data, including heart r
 (via a USB ANT+ dongle).
 
 # Interface hardware
-==Raspberry Pi 4 only!==
+**Raspberry Pi 4 only!**
 Here is a very basic schematic for hooking the Pi up to the controller board.
 There is no need to cut anything to do this: the cable linking the console and
 the controller should have a connector at the top of the leg holding the
